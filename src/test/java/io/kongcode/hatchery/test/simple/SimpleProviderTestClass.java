@@ -1,15 +1,17 @@
-package io.kongcode.hatchery.provider.custom;
+package io.kongcode.hatchery.test.simple;
+
+import io.kongcode.hatchery.test.core.A;
 
 import javax.inject.Inject;
 
 /**
  * Created by JoãoPedro on 13/08/2015.
  */
-public class CustomProviderTestClass {
+public class SimpleProviderTestClass {
 
-    @Inject private CustomProviderTestClassDependency dependency;
+    @Inject private A dependency;
 
-    public CustomProviderTestClassDependency getDependency() {
+    public A getDependency() {
         return dependency;
     }
 
@@ -19,7 +21,7 @@ public class CustomProviderTestClass {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        CustomProviderTestClass that = (CustomProviderTestClass) o;
+        SimpleProviderTestClass that = (SimpleProviderTestClass) o;
 
         return !(dependency != null ?
             !dependency.equals(that.dependency) :
